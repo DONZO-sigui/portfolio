@@ -1,4 +1,5 @@
 const TestimonialsModel = require('../models/testimonials.model');
+const nodemailer = require('nodemailer');
 
 const getAllTestimonials = async (req, res) => {
     try {
@@ -13,6 +14,32 @@ const createTestimonial = async (req, res) => {
     const { author_name, author_role, content, rating } = req.body;
     try {
         const newTestimonial = await TestimonialsModel.createTestimonial(author_name, author_role, content, rating);
+        
+        // Configuration Nodemailer pour notifier le propriétaire
+        if (process.env.EMAIL_USER && process.env.EMAIL_PASS) {
+            const transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user: process.env.EMAIL_USER,
+                    pass: process.env.EMAIL_PASS
+                }
+            });
+
+            const mailOptions = {
+                from: process.env.EMAIL_USER,
+                to: process.env.EMAIL_USER,
+                subject: `Nouveau témoignage sur le Portfolio !`,
+                text: `Vous avez reçu un nouveau témoignage (avis) !\n\nDe : ${author_name} (${author_role})\nNote : ${rating} étoiles\n\nAvis :\n${content}`
+            };
+
+            try {
+                await transporter.sendMail(mailOptions);
+                console.log('Notification email envoyée pour le témoignage.');
+            } catch (mailError) {
+                console.error('Erreur email témoignage :', mailError.message);
+            }
+        }
+
         res.status(201).json(newTestimonial);
     } catch (error) {
         res.status(500).json({ message: 'Server error' });
