@@ -40,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-section {
   min-height: 100vh;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.9)), url('./background.jpg') center/cover;
   color: var(--text-light);
   display: flex;
   align-items: center;
