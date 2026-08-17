@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 
-import bgImage from '../assets/background.jpg';
+import bgImage from '../assets/profile.jpg';
 
 const Hero = () => {
   return (
