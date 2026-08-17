@@ -1,12 +1,17 @@
 import React from 'react';
 import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 
+import bgImage from '../assets/background.jpg';
+
 const Hero = () => {
   return (
     <section id="home" className="hero-section">
       <div className="container" data-aos="fade-up">
+        
+        <img src={bgImage} alt="Profil de Bilivogui Joseph Maxime" className="profile-img" />
+        
         {/* MODIFICATION ICI : Remplacez par votre phrase d'accroche principale */}
-        <h1>Bienvenue dans l'univers Bilivogui Joseph Maxime </h1>
+        <h1>Bienvenue dans l'univers<br/>Bilivogui Joseph Maxime</h1>
         
         {/* MODIFICATION ICI : Remplacez par votre sous-titre ou votre niche (ex: Beauté, Sport, Tech) */}
         <p className="lead mb-4">Le monde des affaires</p>
