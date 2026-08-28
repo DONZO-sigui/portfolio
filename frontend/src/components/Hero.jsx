@@ -13,7 +13,7 @@ const Hero = () => {
         <h1>Bienvenue dans l'univers de<br/>Sigui Donzo</h1>
         
         <p className="lead mb-4 mx-auto" style={{ maxWidth: '800px' }}>
-          Étudiant en informatique et développeur passionné par la création de solutions numériques, le backend, les systèmes Linux, l'IoT et les réseaux informatiques.
+          Jeune diplômé en informatique et développeur passionné par la création de solutions numériques, le backend, les systèmes Linux, l'IoT et les réseaux informatiques.
         </p>
         
         <div className="d-flex justify-content-center gap-4 mb-4">

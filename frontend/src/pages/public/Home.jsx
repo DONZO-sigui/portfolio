@@ -38,7 +38,7 @@ const Home = () => {
           <div className="row justify-content-center mt-4">
             <div className="col-lg-10 text-center" data-aos="fade-up" data-aos-delay="100">
               <p className="lead text-muted">
-                Étudiant en informatique (Niveau L3) à l'Université Gamal Abdel Nasser de Conakry, 
+                Jeune diplômé en informatique (Licence) de l'Université Gamal Abdel Nasser de Conakry, 
                 je suis profondément passionné par le développement, les réseaux et les systèmes.
               </p>
               <p className="text-muted">
@@ -166,9 +166,9 @@ const Home = () => {
           <div className="row justify-content-center mt-4">
             <div className="col-md-8" data-aos="fade-up">
               <div className="card border-0 shadow-sm p-4 text-center">
-                <h3 className="text-primary mb-2">Licence en Informatique / NTIC</h3>
+                <h3 className="text-primary mb-2">Diplôme de Licence en Informatique / NTIC</h3>
                 <h5 className="text-muted mb-4">UGANC — Université Gamal Abdel Nasser de Conakry</h5>
-                <span className="badge bg-warning text-dark px-3 py-2 fs-6">Niveau : L3</span>
+                <span className="badge bg-success text-white px-3 py-2 fs-6">Diplômé</span>
               </div>
             </div>
           </div>
