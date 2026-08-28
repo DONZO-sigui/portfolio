@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import bgImage from '../assets/profile.jpg';
 
@@ -8,27 +8,23 @@ const Hero = () => {
     <section id="home" className="hero-section">
       <div className="container" data-aos="fade-up">
         
-        <img src={bgImage} alt="Profil de Bilivogui Joseph Maxime" className="profile-img" />
+        <img src={bgImage} alt="Profil de Sigui Donzo" className="profile-img" />
         
-        {/* MODIFICATION ICI : Remplacez par votre phrase d'accroche principale */}
-        <h1>Bienvenue dans l'univers<br/>Bilivogui Joseph Maxime</h1>
+        <h1>Bienvenue dans l'univers de<br/>Sigui Donzo</h1>
         
-        {/* MODIFICATION ICI : Remplacez par votre sous-titre ou votre niche (ex: Beauté, Sport, Tech) */}
-        <p className="lead mb-4">Le monde des affaires</p>
+        <p className="lead mb-4 mx-auto" style={{ maxWidth: '800px' }}>
+          Étudiant en informatique et développeur passionné par la création de solutions numériques, le backend, les systèmes Linux, l'IoT et les réseaux informatiques.
+        </p>
         
-        <div className="d-flex justify-content-center gap-3 mb-4">
-          {/* MODIFICATION ICI : Mettez le lien de votre page Instagram à la place de "#" */}
-          <a href="#" target="_blank" rel="noreferrer" className="text-light fs-3 custom-hover"><FaInstagram /></a>
-          {/* MODIFICATION ICI : Mettez le lien de votre page TikTok à la place de "#" */}
-          <a href="#" target="_blank" rel="noreferrer" className="text-light fs-3 custom-hover"><FaTiktok /></a>
-          {/* MODIFICATION ICI : Mettez le lien de votre chaîne YouTube à la place de "#" */}
-          <a href="#" target="_blank" rel="noreferrer" className="text-light fs-3 custom-hover"><FaYoutube /></a>
-          <a href="#" target="_blank" rel="noreferrer" className="text-light fs-3 custom-hover"><FaWhatsapp /></a>
-          <a href="https://www.facebook.com/share/1EDsi1yJZg/?mibextid=wwXlfr" target="_blank" rel="noreferrer" className="text-light fs-3 custom-hover"><FaFacebook /></a>
+        <div className="d-flex justify-content-center gap-4 mb-4">
+          <a href="#" target="_blank" rel="noreferrer" className="text-light fs-2 custom-hover"><FaGithub /></a>
+          <a href="#" target="_blank" rel="noreferrer" className="text-light fs-2 custom-hover"><FaLinkedin /></a>
         </div>
         
-        {/* MODIFICATION ICI : Vous pouvez changer le texte du bouton si besoin */}
-        <a href="#contact" className="btn btn-primary-custom">Travaillons Ensemble</a>
+        <div className="d-flex justify-content-center gap-3">
+          <a href="#projects" className="btn btn-outline-light px-4 py-2" style={{ borderRadius: '8px' }}>Mes Projets</a>
+          <a href="#contact" className="btn btn-primary-custom">Me Contacter</a>
+        </div>
       </div>
     </section>
   );
