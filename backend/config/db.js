@@ -9,9 +9,18 @@ const pool = new Pool({
 });
 
 pool.connect()
-  .then(() => console.log('Connected to PostgreSQL Database'))
+  .then(async (client) => {
+    console.log('Connected to PostgreSQL Database');
+    try {
+      await client.query('ALTER TABLE testimonials ADD COLUMN IF NOT EXISTS admin_reply TEXT;');
+      console.log('Migration OK : Colonne admin_reply vérifiée.');
+    } catch (e) {
+      console.error('Erreur lors de la migration', e);
+    } finally {
+      client.release();
+    }
+  })
   .catch((err) => console.error('Database connection error', err));
-
 pool.on('error', (err) => {
   console.error('Unexpected error on idle client', err);
   process.exit(-1);
