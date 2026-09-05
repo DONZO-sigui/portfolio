@@ -17,8 +17,10 @@ const Hero = () => {
         </p>
         
         <div className="d-flex justify-content-center gap-4 mb-4">
-          <a href="#" target="_blank" rel="noreferrer" className="text-light fs-2 custom-hover"><FaGithub /></a>
-          <a href="#" target="_blank" rel="noreferrer" className="text-light fs-2 custom-hover"><FaLinkedin /></a>
+          <a href="https://www.facebook.com/Donzolejeuneinformaticien?mibextid=ZbWKwL" target="_blank" rel="noreferrer" className="text-light fs-2 custom-hover"><FaFacebook /></a>
+          <a href="https://wa.me/623713713" target="_blank" rel="noreferrer" className="text-light fs-2 custom-hover"><FaWhatsapp /></a>
+          <a href="https://github.com/DonzoSigui" target="_blank" rel="noreferrer" className="text-light fs-2 custom-hover"><FaGithub /></a>
+          <a href="https://www.linkedin.com/in/donzo-sigui-0b0b0b/" target="_blank" rel="noreferrer" className="text-light fs-2 custom-hover"><FaLinkedin /></a>
         </div>
         
         <div className="d-flex justify-content-center gap-3">
