@@ -41,7 +41,7 @@ const Home = () => {
                 Jeune diplômé en informatique (Licence) de l'Université Gamal Abdel Nasser de Conakry, 
                 je suis profondément passionné par le développement, les réseaux et les systèmes.
               </p>
-              <p className="text-muted">
+              <p className="leadtext-muted">
               DONZO SIGUI est un jeune informaticien originaire de Lola, dont le parcours est marqué par la persévérance, la curiosité et une passion grandissante pour les technologies de l’information.
 
               Il commence ses études élémentaires en 2009 dans son village natal de Gbata. Après plusieurs années d’apprentissage, il obtient en 2015 son examen d’entrée en 7ᵉ année, ce qui lui permet de poursuivre ses études secondaires au collège de Gama-Berema.
