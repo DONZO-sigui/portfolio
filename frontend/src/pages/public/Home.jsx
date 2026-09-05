@@ -42,7 +42,22 @@ const Home = () => {
                 je suis profondément passionné par le développement, les réseaux et les systèmes.
               </p>
               <p className="text-muted">
-                Mon parcours académique et mes projets personnels m'ont permis de développer une polyvalence technique allant de la conception d'API REST (Backend) à l'administration de systèmes Linux, en passant par la configuration de réseaux complexes et l'expérimentation IoT (ESP32). Je suis motivé par la résolution de problèmes et j'ai pour objectif de devenir un ingénieur complet, capable de concevoir des architectures robustes et sécurisées de bout en bout.
+              DONZO SIGUI est un jeune informaticien originaire de Lola, dont le parcours est marqué par la persévérance, la curiosité et une passion grandissante pour les technologies de l’information.
+
+              Il commence ses études élémentaires en 2009 dans son village natal de Gbata. Après plusieurs années d’apprentissage, il obtient en 2015 son examen d’entrée en 7ᵉ année, ce qui lui permet de poursuivre ses études secondaires au collège de Gama-Berema.
+
+              En 2019, il poursuit son cursus au lycée de Lola. C’est durant cette période qu’il découvre véritablement l’univers de l’informatique. Fasciné par ce domaine en constante évolution, il commence progressivement à développer ses connaissances et à s’intéresser davantage aux technologies numériques.
+
+              En 2021, alors qu’il est en classe de 12ᵉ année, il obtient sa première attestation en informatique de base. Cette première certification constitue une étape importante dans son parcours et renforce sa volonté de faire de l’informatique son domaine d’études et son futur métier.
+
+              Après l’obtention de son Baccalauréat unique en 2023, il est orienté vers l’Université Gamal Abdel Nasser de Conakry (UGANC), où il intègre le programme Nouvelles Technologies de l’Information et de la Communication (NTIC).
+              Durant ses années universitaires, il approfondit progressivement ses connaissances en informatique et développe un intérêt particulier pour les réseaux informatiques, le developpement web, les infrastructures réseau et les technologies de communication.
+
+              En 2026, après 3 années de formation et d’apprentissage unisersitaire, il obtient une Licence professionnelle en Informatique, marquant une étape majeure de son parcours académique.
+
+              Désireux de confronter ses connaissances théoriques aux réalités du monde professionnel, il effectue actuellement un stage au sein de l’entreprise Afrique IT Solution (AISS), où il évolue dans le domaine des réseaux informatiques en tant que stagiaire ingénieur réseau.
+
+              À travers ce parcours, Donzo poursuit l’objectif de renforcer continuellement ses compétences techniques, d’acquérir une solide expérience professionnelle et de construire une carrière dans le domaine des réseaux et des technologies de l’information.               
               </p>
             </div>
           </div>
@@ -82,7 +97,7 @@ const Home = () => {
               <div className="card h-100 border-0 shadow-sm p-4">
                 <h4 className="text-primary mb-3"><i className="bi bi-hdd-network me-2"></i>Systèmes & Réseaux</h4>
                 <ul className="list-unstyled text-muted">
-                  <li><i className="bi bi-check2 text-success me-2"></i>Linux (Administration & CLI)</li>
+                  <li><i className="bi bi-check2 text-success me-2"></i>Linux (Administration & CLI) debutant </li>
                   <li><i className="bi bi-check2 text-success me-2"></i>TCP/IP, VLAN, Routage</li>
                   <li><i className="bi bi-check2 text-success me-2"></i>Cisco Packet Tracer</li>
                 </ul>
@@ -207,7 +222,7 @@ const Home = () => {
       {/* Footer */}
       <footer className="footer-custom text-center">
         <div className="container">
-          <p className="mb-0">&copy; {new Date().getFullYear()} Sigui Donzo | donzosd63@gmail.com | Tel: 623 713 713</p>
+          <p className="mb-0">&copy; {new Date().getFullYear()} Donzo-services | donzosd63@gmail.com | Tel: 623 713 713</p>
         </div>
       </footer>
     </div>
