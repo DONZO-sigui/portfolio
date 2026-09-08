@@ -128,7 +128,7 @@ const Home = () => {
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
-                  <h4 className="card-title text-primary">Station IoT Environnementale</h4>
+                  <h4 className="card-title text-primary">Systeme de surveillance d'un reservoir d'eau en temps reel pour arroser un champ</h4>
                   <h6 className="card-subtitle mb-3 text-muted">ESP32 • Capteurs • Backend</h6>
                   <p className="card-text text-muted small">
                     Système de collecte de données environnementales (température, pH, turbidité, GPS, GSM) basé sur ESP32, avec affichage OLED et transmission vers une base PostgreSQL via API REST.
@@ -143,14 +143,11 @@ const Home = () => {
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
-                  <h4 className="card-title text-primary">Portfolio Dynamique</h4>
+                  <h4 className="card-title text-primary">Portfolio</h4>
                   <h6 className="card-subtitle mb-3 text-muted">React • Node.js • PostgreSQL</h6>
                   <p className="card-text text-muted small">
-                    Développement complet de ce portfolio avec un backend robuste (Node.js/Express) pour la gestion dynamique des contacts et des témoignages.
+                    Développement complet de ce portfolio avec un backend robuste pour permettre au monde entier de connaitre mon parcours ainsi que mon origine.
                   </p>
-                </div>
-                <div className="card-footer bg-white border-0 px-4 pb-4 pt-0">
-                  <a href="#" className="btn btn-sm btn-outline-primary">Voir sur GitHub</a>
                 </div>
               </div>
             </div>
@@ -158,10 +155,10 @@ const Home = () => {
             <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
               <div className="card h-100 border-0 shadow-sm">
                 <div className="card-body p-4">
-                  <h4 className="card-title text-primary">Architecture Réseau d'Entreprise</h4>
+                  <h4 className="card-title text-primary">Architecture Réseau </h4>
                   <h6 className="card-subtitle mb-3 text-muted">Cisco Packet Tracer • VLAN</h6>
                   <p className="card-text text-muted small">
-                    Conception et simulation complète d'une infrastructure réseau sécurisée. Implémentation de VLANs, routage inter-VLAN et politiques de sécurité.
+                    Conception et simulation complète d'une infrastructure réseau sécurisée de l'UGANC. Implémentation de VLANs, routage inter-VLAN et politiques de sécurité.
                   </p>
                 </div>
                 <div className="card-footer bg-white border-0 px-4 pb-4 pt-0">
