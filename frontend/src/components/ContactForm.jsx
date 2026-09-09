@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import api from '../services/api';
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', subject: 'Message depuis le portfolio', message: '' });
   const [status, setStatus] = useState('');
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -13,7 +13,7 @@ const ContactForm = () => {
     try {
       await api.post('/contacts', formData);
       setStatus('Message envoyé avec succès !');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      setFormData({ name: '', email: '', subject: 'Message depuis le portfolio', message: '' });
     } catch (error) {
       setStatus('Erreur lors de l\'envoi du message.');
     }
@@ -28,9 +28,6 @@ const ContactForm = () => {
           </div>
           <div className="col-md-6">
             <input type="email" name="email" className="form-control" placeholder="Votre Email" value={formData.email} onChange={handleChange} required />
-          </div>
-          <div className="col-12">
-            <input type="text" name="subject" className="form-control" placeholder="Sujet" value={formData.subject} onChange={handleChange} required />
           </div>
           <div className="col-12">
             <textarea name="message" className="form-control" rows="5" placeholder="Votre Message" value={formData.message} onChange={handleChange} required></textarea>

@@ -24,14 +24,8 @@ const TestimonialForm = ({ onTestimonialAdded }) => {
       <h4 className="text-center mb-4">Laissez un avis !</h4>
       <form onSubmit={handleSubmit}>
         <div className="row g-3">
-          <div className="col-md-6">
+          <div className="col-12">
             <input type="text" className="form-control" placeholder="Votre nom" value={formData.author_name} onChange={(e) => setFormData({...formData, author_name: e.target.value})} required />
-          </div>
-          <div className="col-md-4">
-            <input type="text" className="form-control" placeholder="Rôle (ex: Client, Abonné)" value={formData.author_role} onChange={(e) => setFormData({...formData, author_role: e.target.value})} />
-          </div>
-          <div className="col-md-2">
-            <input type="number" className="form-control" placeholder="Note /5" min="1" max="5" value={formData.rating} onChange={(e) => setFormData({...formData, rating: e.target.value})} required />
           </div>
           <div className="col-12">
             <textarea className="form-control" rows="3" placeholder="Votre témoignage..." value={formData.content} onChange={(e) => setFormData({...formData, content: e.target.value})} required></textarea>

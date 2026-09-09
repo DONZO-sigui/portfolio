@@ -26,13 +26,7 @@ const TestimonialFeed = ({ testimonials }) => {
                   <h6 className="mb-0 fw-bold">{test.author_name}</h6>
                   <small className="text-muted">{new Date(test.created_at).toLocaleDateString()}</small>
                 </div>
-                <small className="text-primary fw-semibold d-block mb-2">{test.author_role}</small>
-                <p className="mb-1 text-dark" style={{ fontSize: '0.95rem' }}>{test.content}</p>
-                <div className="text-warning small mb-3">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} color={i < test.rating ? '#F59E0B' : '#e2e8f0'} />
-                  ))}
-                </div>
+                <p className="mb-3 mt-2 text-dark" style={{ fontSize: '0.95rem' }}>{test.content}</p>
                 
                 {test.admin_reply && (
                   <div className="admin-reply bg-white p-2 rounded border border-light" style={{ marginLeft: '20px' }}>
