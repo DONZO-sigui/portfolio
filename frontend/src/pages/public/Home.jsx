@@ -7,9 +7,11 @@ import Hero from '../../components/Hero';
 import TestimonialFeed from '../../components/TestimonialFeed';
 import ContactForm from '../../components/ContactForm';
 import TestimonialForm from '../../components/TestimonialForm';
+import MediaGallery from '../../components/MediaGallery';
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
+  const [medias, setMedias] = useState([]);
   const [reloadTrigger, setReloadTrigger] = useState(0);
 
   useEffect(() => {
@@ -17,8 +19,12 @@ const Home = () => {
     
     const fetchData = async () => {
       try {
-        const testRes = await api.get('/testimonials');
+        const [testRes, mediasRes] = await Promise.all([
+          api.get('/testimonials'),
+          api.get('/medias')
+        ]);
         setTestimonials(testRes.data || []);
+        setMedias(mediasRes.data || []);
       } catch (error) {
         console.error("Error fetching data", error);
       }
@@ -119,8 +125,18 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section id="gallery" className="py-5 bg-white">
+        <div className="container">
+          <h2 className="section-title" data-aos="fade-up">Galerie d'Activités</h2>
+          <div className="mt-5">
+            <MediaGallery medias={medias} />
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="py-5 bg-white">
+      <section id="projects" className="py-5 bg-light">
         <div className="container">
           <h2 className="section-title" data-aos="fade-up">Projets & Réalisations</h2>
           <div className="row mt-5 g-4">
@@ -134,7 +150,7 @@ const Home = () => {
                     Système de collecte de données environnementales (température, pH, turbidité, GPS, GSM) basé sur ESP32, avec affichage OLED et transmission vers une base PostgreSQL via API REST.
                   </p>
                 </div>
-                <div className="card-footer bg-white border-0 px-4 pb-4 pt-0">
+                <div className="card-footer bg-light border-0 px-4 pb-4 pt-0">
                   <a href="#" className="btn btn-sm btn-outline-primary">Voir sur GitHub</a>
                 </div>
               </div>
@@ -161,7 +177,7 @@ const Home = () => {
                     Conception et simulation complète d'une infrastructure réseau sécurisée de l'UGANC. Implémentation de VLANs, routage inter-VLAN et politiques de sécurité.
                   </p>
                 </div>
-                <div className="card-footer bg-white border-0 px-4 pb-4 pt-0">
+                <div className="card-footer bg-light border-0 px-4 pb-4 pt-0">
                   <a href="#" className="btn btn-sm btn-outline-primary">Détails</a>
                 </div>
               </div>
@@ -172,7 +188,7 @@ const Home = () => {
       </section>
 
       {/* Education Section */}
-      <section id="education" className="py-5 bg-light">
+      <section id="education" className="py-5 bg-white">
         <div className="container">
           <h2 className="section-title" data-aos="fade-up">Parcours Académique</h2>
           <div className="row justify-content-center mt-4">
@@ -188,7 +204,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-5 bg-white">
+      <section id="testimonials" className="py-5 bg-light">
         <div className="container">
           <h2 className="section-title" data-aos="fade-up">Recommandations & Avis</h2>
           
@@ -205,7 +221,7 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-5 bg-light">
+      <section id="contact" className="py-5 bg-white">
         <div className="container">
           <h2 className="section-title" data-aos="fade-up">Contactez-Moi</h2>
           <div className="row justify-content-center mt-4">
