@@ -17,13 +17,13 @@ const createMedia = async (req, res) => {
             return res.status(400).json({ message: 'No file provided' });
         }
         
-        const { title } = req.body;
+        const { title, description } = req.body;
         const url = req.file.path;
         const public_id = req.file.filename;
         const isVideo = req.file.mimetype.includes('video');
         const type = isVideo ? 'video' : 'image';
 
-        const newMedia = await MediasModel.createMedia(title || 'Untitled', url, type, public_id);
+        const newMedia = await MediasModel.createMedia(title || 'Untitled', url, type, public_id, description || '');
         res.status(201).json(newMedia);
     } catch (error) {
         console.error('Error creating media:', error);
@@ -33,9 +33,9 @@ const createMedia = async (req, res) => {
 
 const updateMedia = async (req, res) => {
     const { id } = req.params;
-    const { title } = req.body;
+    const { title, description } = req.body;
     try {
-        const updatedMedia = await MediasModel.updateMedia(id, title);
+        const updatedMedia = await MediasModel.updateMedia(id, title, description);
         if (!updatedMedia) {
             return res.status(404).json({ message: 'Media not found' });
         }

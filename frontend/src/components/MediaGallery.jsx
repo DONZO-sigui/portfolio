@@ -45,16 +45,21 @@ const MediaGallery = ({ medias: initialMedias }) => {
               ) : (
                 <img src={media.url} alt={media.title} className="img-fluid" />
               )}
-              <div className="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-50 text-white d-flex justify-content-between align-items-center">
-                <h5 className="mb-0">{media.title}</h5>
-                <button 
-                  className="btn btn-sm d-flex align-items-center gap-1 text-white border-0" 
-                  onClick={() => handleLike(media.id)}
-                  style={{ background: 'transparent' }}
-                >
-                  <FaHeart color={isLiked ? '#dc3545' : 'white'} size={20} />
-                  <span>{media.likes || 0}</span>
-                </button>
+              <div className="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white d-flex flex-column justify-content-end">
+                <div className="d-flex justify-content-between align-items-center mb-1">
+                  <h5 className="mb-0 fw-bold">{media.title}</h5>
+                  <button 
+                    className="btn btn-sm d-flex align-items-center gap-1 text-white border-0" 
+                    onClick={() => handleLike(media.id)}
+                    style={{ background: 'transparent' }}
+                  >
+                    <FaHeart color={isLiked ? '#dc3545' : 'white'} size={20} />
+                    <span>{media.likes || 0}</span>
+                  </button>
+                </div>
+                {media.description && (
+                  <p className="small mb-0 opacity-75">{media.description}</p>
+                )}
               </div>
             </div>
           </div>

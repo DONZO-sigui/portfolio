@@ -5,18 +5,18 @@ const getAllMedias = async () => {
     return rows;
 };
 
-const createMedia = async (title, url, type, public_id) => {
+const createMedia = async (title, url, type, public_id, description) => {
     const { rows } = await pool.query(
-        'INSERT INTO medias (title, url, type, public_id) VALUES ($1, $2, $3, $4) RETURNING *',
-        [title, url, type, public_id]
+        'INSERT INTO medias (title, url, type, public_id, description) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+        [title, url, type, public_id, description]
     );
     return rows[0];
 };
 
-const updateMedia = async (id, title) => {
+const updateMedia = async (id, title, description) => {
     const { rows } = await pool.query(
-        'UPDATE medias SET title = $1 WHERE id = $2 RETURNING *',
-        [title, id]
+        'UPDATE medias SET title = $1, description = $2 WHERE id = $3 RETURNING *',
+        [title, description, id]
     );
     return rows[0];
 };

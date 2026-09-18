@@ -6,11 +6,13 @@ const ManageMedia = () => {
   const [medias, setMedias] = useState([]);
   const [file, setFile] = useState(null);
   const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
   const [uploading, setUploading] = useState(false);
   
   // États pour la modification
   const [editingId, setEditingId] = useState(null);
   const [editTitle, setEditTitle] = useState('');
+  const [editDescription, setEditDescription] = useState('');
 
   useEffect(() => {
     fetchMedias();
@@ -33,6 +35,7 @@ const ManageMedia = () => {
     const formData = new FormData();
     formData.append('media', file);
     formData.append('title', title);
+    formData.append('description', description);
 
     try {
       await api.post('/medias', formData, {
@@ -41,6 +44,7 @@ const ManageMedia = () => {
       alert('Média uploadé avec succès !');
       setFile(null);
       setTitle('');
+      setDescription('');
       fetchMedias();
     } catch (err) {
       alert('Erreur lors de l\'upload.');
@@ -62,12 +66,13 @@ const ManageMedia = () => {
   const handleEditClick = (media) => {
     setEditingId(media.id);
     setEditTitle(media.title);
+    setEditDescription(media.description || '');
   };
 
   const handleSaveEdit = async (id) => {
     try {
-      await api.put(`/medias/${id}`, { title: editTitle });
-      alert('Titre modifié avec succès !');
+      await api.put(`/medias/${id}`, { title: editTitle, description: editDescription });
+      alert('Modifié avec succès !');
       setEditingId(null);
       fetchMedias();
     } catch (err) {
@@ -81,11 +86,14 @@ const ManageMedia = () => {
       
       <form onSubmit={handleUpload} className="mb-5 bg-light p-3 rounded">
         <h5>Ajouter un nouveau média (Image/Vidéo)</h5>
-        <div className="row g-3">
-          <div className="col-md-5">
+        <div className="row g-3 align-items-center">
+          <div className="col-md-3">
             <input type="text" className="form-control" placeholder="Titre du média" value={title} onChange={(e) => setTitle(e.target.value)} required />
           </div>
-          <div className="col-md-5">
+          <div className="col-md-4">
+            <input type="text" className="form-control" placeholder="Description (optionnelle)" value={description} onChange={(e) => setDescription(e.target.value)} />
+          </div>
+          <div className="col-md-3">
             <input type="file" className="form-control" accept="image/*,video/*" onChange={(e) => setFile(e.target.files[0])} required />
           </div>
           <div className="col-md-2">
@@ -118,9 +126,15 @@ const ManageMedia = () => {
                 </td>
                 <td>
                   {editingId === media.id ? (
-                    <input type="text" className="form-control form-control-sm" value={editTitle} onChange={(e) => setEditTitle(e.target.value)} />
+                    <>
+                      <input type="text" className="form-control form-control-sm mb-2" value={editTitle} onChange={(e) => setEditTitle(e.target.value)} placeholder="Titre" />
+                      <input type="text" className="form-control form-control-sm" value={editDescription} onChange={(e) => setEditDescription(e.target.value)} placeholder="Description" />
+                    </>
                   ) : (
-                    media.title
+                    <>
+                      <strong>{media.title}</strong>
+                      <p className="text-muted small mb-0" style={{ maxWidth: '200px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{media.description}</p>
+                    </>
                   )}
                 </td>
                 <td><span className={`badge ${media.type === 'video' ? 'bg-info' : 'bg-success'}`}>{media.type}</span></td>
