@@ -113,5 +113,3 @@ const MediaGallery = ({ medias: initialMedias }) => {
 };
 
 export default MediaGallery;
-
-export default MediaGallery;
