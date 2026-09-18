@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ManageTestimonials from './ManageTestimonials';
 import ManageMessages from './ManageMessages';
+import ManageMedia from './ManageMedia';
+import ManageCollaborations from './ManageCollaborations';
+import ManageStatistics from './ManageStatistics';
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const [activeTab, setActiveTab] = useState('testimonials');
+  const [activeTab, setActiveTab] = useState('media');
 
   useEffect(() => {
     if (!localStorage.getItem('token')) {
@@ -20,9 +23,12 @@ const Dashboard = () => {
 
   const renderContent = () => {
     switch (activeTab) {
+      case 'media': return <ManageMedia />;
       case 'testimonials': return <ManageTestimonials />;
       case 'messages': return <ManageMessages />;
-      default: return <ManageTestimonials />;
+      case 'collaborations': return <ManageCollaborations />;
+      case 'statistics': return <ManageStatistics />;
+      default: return <ManageMedia />;
     }
   };
 
@@ -33,10 +39,19 @@ const Dashboard = () => {
         <h3 className="mb-4">Admin Panel</h3>
         <ul className="nav flex-column gap-2">
           <li className="nav-item">
+            <button className={`btn w-100 text-start ${activeTab === 'media' ? 'btn-light' : 'btn-outline-light border-0'}`} onClick={() => setActiveTab('media')}>Portfolio (Médias)</button>
+          </li>
+          <li className="nav-item">
             <button className={`btn w-100 text-start ${activeTab === 'testimonials' ? 'btn-light' : 'btn-outline-light border-0'}`} onClick={() => setActiveTab('testimonials')}>Témoignages & Avis</button>
           </li>
           <li className="nav-item">
             <button className={`btn w-100 text-start ${activeTab === 'messages' ? 'btn-light' : 'btn-outline-light border-0'}`} onClick={() => setActiveTab('messages')}>Messages (Contact)</button>
+          </li>
+          <li className="nav-item">
+            <button className={`btn w-100 text-start ${activeTab === 'collaborations' ? 'btn-light' : 'btn-outline-light border-0'}`} onClick={() => setActiveTab('collaborations')}>Collaborations</button>
+          </li>
+          <li className="nav-item">
+            <button className={`btn w-100 text-start ${activeTab === 'statistics' ? 'btn-light' : 'btn-outline-light border-0'}`} onClick={() => setActiveTab('statistics')}>Statistiques</button>
           </li>
         </ul>
         <button className="btn btn-danger w-100 mt-5" onClick={handleLogout}>Déconnexion</button>
