@@ -44,26 +44,22 @@ const Home = () => {
           <div className="row justify-content-center mt-4">
             <div className="col-lg-10 text-center" data-aos="fade-up" data-aos-delay="100">
               <p className="lead text-muted">
-                Jeune diplômé en informatique (Licence) de l'Université Gamal Abdel Nasser de Conakry, 
-                je suis profondément passionné par le développement, les réseaux et les systèmes.
-              </p>
-              <p className="lead text-muted">
-              DONZO SIGUI est un jeune informaticien originaire de Lola, dont le parcours est marqué par la persévérance, la curiosité et une passion grandissante pour les technologies de l’information.
+              DONZO SIGUI est un jeune informaticien originaire de Lola, dont le parcours est marqué par la persévérance, la curiosité et une passion grandissante pour les technologies de l’information.</p>
 
-              Il commence ses études élémentaires en 2009 dans son village natal de Gbata. Après plusieurs années d’apprentissage, il obtient en 2015 son examen d’entrée en 7ᵉ année, ce qui lui permet de poursuivre ses études secondaires au collège de Gama-Berema.
+              <p>Il commence ses études élémentaires en 2009 dans son village natal de <strong2> Gbata.</strong2> Après plusieurs années d’apprentissage, il obtient en 2015 son examen d’entrée en 7ᵉ année, ce qui lui permet de poursuivre ses études secondaires au collège de<strong2> Gama-Berema.</strong2></p>
 
-              En 2019, il poursuit son cursus au lycée de Lola. C’est durant cette période qu’il découvre véritablement l’univers de l’informatique. Fasciné par ce domaine en constante évolution, il commence progressivement à développer ses connaissances et à s’intéresser davantage aux technologies numériques.
+              <p>En 2019, il poursuit son cursus au lycée de <strong2>Lola.</strong2> C’est durant cette période qu’il découvre véritablement l’univers de l’informatique. Fasciné par ce domaine en constante évolution, il commence progressivement à développer ses connaissances et à s’intéresser davantage aux technologies numériques.</p>
 
-              En 2021, alors qu’il est en classe de 12ᵉ année, il obtient sa première attestation en informatique de base. Cette première certification constitue une étape importante dans son parcours et renforce sa volonté de faire de l’informatique son domaine d’études et son futur métier.
+              <p>En 2021, alors qu’il est en classe de 12ᵉ année, il obtient sa première attestation en informatique de base. Cette première certification constitue une étape importante dans son parcours et renforce sa volonté de faire de l’informatique son domaine d’études et son futur métier.</p>
 
-              Après l’obtention de son Baccalauréat unique en 2023, il est orienté vers l’Université Gamal Abdel Nasser de Conakry (UGANC), où il intègre le programme Nouvelles Technologies de l’Information et de la Communication (NTIC).
-              Durant ses années universitaires, il approfondit progressivement ses connaissances en informatique et développe un intérêt particulier pour les réseaux informatiques, le developpement web, les infrastructures réseau et les technologies de communication.
+              <p>Après l’obtention de son Baccalauréat unique en 2023, il est orienté vers l’Université Gamal Abdel Nasser de Conakry (UGANC), où il intègre le programme Nouvelles Technologies de l’Information et de la Communication<strong2>(NTIC).</strong2> 
+              Durant ses années universitaires, il approfondit progressivement ses connaissances en informatique et développe un intérêt particulier pour les réseaux informatiques, le developpement web, les infrastructures réseau et les technologies de communication.</p>
 
-              En 2026, après 3 années de formation et d’apprentissage unisersitaire, il obtient une Licence professionnelle en Informatique, marquant une étape majeure de son parcours académique.
+              <p>En 2026, après 3 années de formation et d’apprentissage unisersitaire, il obtient une Licence professionnelle en Informatique, marquant une étape majeure de son parcours académique.</p>
 
-              Désireux de confronter ses connaissances théoriques aux réalités du monde professionnel, il effectue actuellement un stage au sein de l’entreprise Afrique IT Solution (AISS), où il évolue dans le domaine des réseaux informatiques en tant que stagiaire ingénieur réseau.
+              <p>Désireux de confronter ses connaissances théoriques aux réalités du monde professionnel, il effectue actuellement un stage au sein de l’entreprise Afrique IT Solution (AISS), où il évolue dans le domaine des réseaux informatiques en tant que stagiaire ingénieur réseau.</p>
 
-              À travers ce parcours, Donzo poursuit l’objectif de renforcer continuellement ses compétences techniques, d’acquérir une solide expérience professionnelle et de construire une carrière dans le domaine des réseaux et des technologies de l’information.               
+              <p>À travers ce parcours, Donzo poursuit l’objectif de renforcer continuellement ses compétences techniques, d’acquérir une solide expérience professionnelle et de construire une carrière dans le domaine des réseaux et des technologies de l’information.               
               </p>
             </div>
           </div>
@@ -150,9 +146,6 @@ const Home = () => {
                     Système de collecte de données environnementales (température, pH, turbidité, GPS, GSM) basé sur ESP32, avec affichage OLED et transmission vers une base PostgreSQL via API REST.
                   </p>
                 </div>
-                <div className="card-footer bg-light border-0 px-4 pb-4 pt-0">
-                  <a href="#" className="btn btn-sm btn-outline-primary">Voir sur GitHub</a>
-                </div>
               </div>
             </div>
 
@@ -176,9 +169,6 @@ const Home = () => {
                   <p className="card-text text-muted small">
                     Conception et simulation complète d'une infrastructure réseau sécurisée de l'UGANC. Implémentation de VLANs, routage inter-VLAN et politiques de sécurité.
                   </p>
-                </div>
-                <div className="card-footer bg-light border-0 px-4 pb-4 pt-0">
-                  <a href="#" className="btn btn-sm btn-outline-primary">Détails</a>
                 </div>
               </div>
             </div>

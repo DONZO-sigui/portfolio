@@ -33,13 +33,9 @@ const createContact = async (req, res) => {
                 text: `Vous avez reçu un nouveau message depuis votre Portfolio.\n\nDe : ${name} (${email})\nSujet : ${subject}\n\nMessage :\n${message}`
             };
 
-            try {
-                await transporter.sendMail(mailOptions);
-                console.log('Notification email envoyée au propriétaire.');
-            } catch (mailError) {
-                console.error('Erreur lors de l\'envoi de l\'email (Vérifiez les identifiants) :', mailError.message);
-                // On ne bloque pas la réponse, on continue
-            }
+            transporter.sendMail(mailOptions)
+                .then(() => console.log('Notification email envoyée au propriétaire.'))
+                .catch(mailError => console.error('Erreur email (non bloquante) :', mailError.message));
         }
 
         res.status(201).json({ message: 'Message sent successfully', contact: newContact });
