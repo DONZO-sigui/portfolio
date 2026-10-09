@@ -1,5 +1,4 @@
 const ArticlesModel = require('../models/articles.model');
-const cloudinary = require('../config/cloudinary');
 
 const getAllArticles = async (req, res) => {
     try {
@@ -28,8 +27,8 @@ const createArticle = async (req, res) => {
         let imageUrl = null;
 
         if (req.file) {
-            const result = await cloudinary.uploader.upload(req.file.path, { folder: 'portfolio/articles' });
-            imageUrl = result.secure_url;
+            // multer-storage-cloudinary a DÉJÀ uploadé le fichier, l'URL est dans req.file.path
+            imageUrl = req.file.path;
         }
 
         const newArticle = await ArticlesModel.createArticle(title, content, imageUrl);

@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const articlesController = require('../controllers/articles.controller');
-const authMiddleware = require('../middleware/auth.middleware');
-const upload = require('../middleware/upload.middleware');
+const authMiddleware = require('../middlewares/auth.middleware');
+const { upload } = require('../config/cloudinary');
 
 router.get('/', articlesController.getAllArticles);
 router.get('/:id', articlesController.getArticleById);
