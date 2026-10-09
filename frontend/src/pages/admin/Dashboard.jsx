@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import ManageTestimonials from './ManageTestimonials';
 import ManageMessages from './ManageMessages';
 import ManageMedia from './ManageMedia';
+import ManageBlog from './ManageBlog';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -24,6 +25,7 @@ const Dashboard = () => {
       case 'testimonials': return <ManageTestimonials />;
       case 'messages': return <ManageMessages />;
       case 'media': return <ManageMedia />;
+      case 'blog': return <ManageBlog />;
       default: return <ManageMedia />;
     }
   };
@@ -36,6 +38,9 @@ const Dashboard = () => {
         <ul className="nav flex-column gap-2">
           <li className="nav-item">
             <button className={`btn w-100 text-start ${activeTab === 'media' ? 'btn-light' : 'btn-outline-light border-0'}`} onClick={() => setActiveTab('media')}>Galerie & Médias</button>
+          </li>
+          <li className="nav-item">
+            <button className={`btn w-100 text-start ${activeTab === 'blog' ? 'btn-light' : 'btn-outline-light border-0'}`} onClick={() => setActiveTab('blog')}>Articles & Blog</button>
           </li>
           <li className="nav-item">
             <button className={`btn w-100 text-start ${activeTab === 'testimonials' ? 'btn-light' : 'btn-outline-light border-0'}`} onClick={() => setActiveTab('testimonials')}>Témoignages & Avis</button>

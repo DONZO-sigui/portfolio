@@ -8,6 +8,7 @@ import TestimonialFeed from '../../components/TestimonialFeed';
 import ContactForm from '../../components/ContactForm';
 import TestimonialForm from '../../components/TestimonialForm';
 import MediaGallery from '../../components/MediaGallery';
+import BlogSection from '../../components/BlogSection';
 
 const Home = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -131,8 +132,16 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <section id="blog" className="py-5 bg-light">
+        <div className="container">
+          <h2 className="section-title" data-aos="fade-up">Derniers Articles</h2>
+          <BlogSection />
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section id="projects" className="py-5 bg-light">
+      <section id="projects" className="py-5 bg-white">
         <div className="container">
           <h2 className="section-title" data-aos="fade-up">Projets & Réalisations</h2>
           <div className="row mt-5 g-4">
