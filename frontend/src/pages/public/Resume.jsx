@@ -20,21 +20,20 @@ const Resume = () => {
         </div>
         
         <div className="card border-0 shadow-sm flex-grow-1 overflow-hidden" style={{ minHeight: '75vh' }}>
-          <iframe 
-            src="/CV_DONZO_SIGUI.pdf" 
+          <object 
+            data="/CV_DONZO_SIGUI.pdf" 
+            type="application/pdf"
             width="100%" 
-            height="100%" 
-            title="CV de Donzo Sigui"
-            style={{ border: 'none', minHeight: '75vh' }}
+            height="100%"
+            style={{ minHeight: '75vh' }}
           >
-            <p className="text-center p-5">
-              Votre navigateur ne supporte pas l'affichage direct des PDF. 
-              <br /><br />
+            <div className="text-center p-5">
+              <p>Votre navigateur ne supporte pas l'affichage direct des PDF.</p>
               <a href="/CV_DONZO_SIGUI.pdf" download="CV_DONZO_SIGUI.pdf" className="btn btn-primary">
-                Télécharger le PDF
+                Cliquez ici pour télécharger le CV
               </a>
-            </p>
-          </iframe>
+            </div>
+          </object>
         </div>
       </div>
     </div>
