@@ -24,7 +24,7 @@ const Hero = () => {
         </div>
         
         <div className="d-flex justify-content-center flex-wrap gap-3">
-          <a href="/CV_DONZO_SIGUI.pdf" download="CV_DONZO_SIGUI.pdf" target="_blank" rel="noopener noreferrer" className="btn px-4 py-2" style={{ borderRadius: '8px', backgroundColor: '#F59E0B', color: '#fff', fontWeight: 'bold' }}>
+          <a href="/cv" className="btn px-4 py-2" style={{ borderRadius: '8px', backgroundColor: '#F59E0B', color: '#fff', fontWeight: 'bold' }}>
             <i className="bi bi-file-earmark-person me-2"></i>Voir mon CV
           </a>
           <a href="#projects" className="btn btn-outline-light px-4 py-2" style={{ borderRadius: '8px' }}>Mes Projets</a>
