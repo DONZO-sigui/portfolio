@@ -58,7 +58,7 @@ const Home = () => {
 
               <p>En 2026, après 3 années de formation et d’apprentissage unisersitaire, il obtient une Licence professionnelle en Informatique, marquant une étape majeure de son parcours académique.</p>
 
-              <p>Désireux de confronter ses connaissances théoriques aux réalités du monde professionnel, il effectue actuellement un stage au sein de l’entreprise Afrique IT Solution (AISS), où il évolue dans le domaine des réseaux informatiques en tant que stagiaire ingénieur réseau.</p>
+              <p>Désireux de confronter ses connaissances théoriques aux réalités du monde professionnel, il a d'abord effectué un stage au sein de l’entreprise Afrique IT Solution (AISS). Fort de cette expérience et ayant fait ses preuves, il a officiellement intégré l'entreprise en tant qu'employé depuis le 01/10/2026, au poste de <strong>Chargé aux Services de Réseau et de Télécommunication</strong>.</p>
 
               <p>À travers ce parcours, Donzo poursuit l’objectif de renforcer continuellement ses compétences techniques, d’acquérir une solide expérience professionnelle et de construire une carrière dans le domaine des réseaux et des technologies de l’information.               
               </p>
